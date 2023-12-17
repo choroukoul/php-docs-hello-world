@@ -24,11 +24,11 @@ $result = $conn->query($sql);
         <?php
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             echo '<div>';
-            echo '<p>Nom medecin: ' . $row['medecinName'] . '</p>';
+            echo '<p>id medecin: ' . $row['idMedecin'] . '</p>';
             echo '<p>Disponibilite: ' . $row['disponibilite'] . '</p>';
             echo '<p>specialite: ' . $row['specialite'] . '</p>';
             // Add a link to view med details
-            echo '<a href="unmedecin.php?medecinName=' . $row['medecinName'] . '">voir le détail</a>';
+            echo '<a href="unmedecin.php?idMedecin=' . $row['idMedecin'] . '">voir le détail</a>';
 
             echo '</div>';
         }

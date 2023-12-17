@@ -28,7 +28,7 @@ if ($medecin) {
     <body>
         <div>
             <h1>Détails du Médecin</h1>
-            <p>Nom du médecin: <?php echo $medecin['medecinName']; ?></p>
+            <p>Nom du médecin: <?php echo $medecin['idMedecin']; ?></p>
             <p>Disponibilité: <?php echo $medecin['dispoinibilite']; ?></p>
             <p>Spécialité: <?php echo $medecin['specialite']; ?></p>
             <img src="<?php echo $room['imagePath'] . '?si=imanee&spr=https&sv=2022-11-02&sr=c&sig=zZGbqUZMIy3SuTjwwfVIkt996nMuPTppsZXGJp5VD0Q%3D'; ?>" alt="Room Image">
