@@ -13,7 +13,7 @@ try {
         $password,
         [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 30, // Set query timeout if needed
+            PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 80, // Set query timeout if needed
         ]
     );
 } catch (PDOException $e) {
