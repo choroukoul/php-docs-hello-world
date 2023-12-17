@@ -31,7 +31,7 @@ if ($medecin) {
             <p>id du médecin: <?php echo $medecin['idMedecin']; ?></p>
             <p>Disponibilité: <?php echo $medecin['disponibilite']; ?></p>
             <p>Spécialité: <?php echo $medecin['specialite']; ?></p>
-            <img src="<?php echo $room['imageDoc'] . 'sp=r&st=2023-12-17T15:31:27Z&se=2023-12-20T23:31:27Z&spr=https&sv=2022-11-02&sr=c&sig=4BgaWHaVQHOtKepm6k5dMu41VrtWxLnJaAIsg%2FiK%2Fhw%3D'; ?>" alt="Image du medecin">
+            <img src="<?php echo $medecin['imageDoc'] . '?sp=r&st=2023-12-17T15:31:27Z&se=2023-12-20T23:31:27Z&spr=https&sv=2022-11-02&sr=c&sig=4BgaWHaVQHOtKepm6k5dMu41VrtWxLnJaAIsg%2FiK%2Fhw%3D'; ?>" alt="Image du medecin">
             <!-- Afficher l'image du médecin depuis Blob Storage -->
         </div>
     </body>
