@@ -7,7 +7,7 @@ $medecinName = $_GET['idMedecin'];
 // Exécuter une requête pour obtenir les détails du médecin
 $sql = "SELECT idMedecin, disponibilite, specialite, imageDoc FROM medecin WHERE idMedecin = :medecinName";
 $stmt = $conn->prepare($sql);
-$stmt->bindParam(':idMedecin', $medecinName);
+$stmt->bindParam(':medecinName', $medecinName);
 $stmt->execute();
 $medecin = $stmt->fetch(PDO::FETCH_ASSOC);
 
