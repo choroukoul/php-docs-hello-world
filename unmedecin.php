@@ -5,7 +5,7 @@ include 'connexion.php'; // Include the database connection file
 $medecinName = $_GET['medecinName'];
 
 // Exécuter une requête pour obtenir les détails du médecin
-$sql = "SELECT medecinName, dispoinibilite, specialite, imageDoc FROM medecin WHERE medecinName = :medecinName";
+$sql = "SELECT medecinName, disponibilite, specialite, imageDoc FROM medecin WHERE medecinName = :medecinName";
 $stmt = $conn->prepare($sql);
 $stmt->bindParam(':medecinName', $medecinName);
 $stmt->execute();
@@ -31,7 +31,7 @@ if ($medecin) {
             <p>Nom du médecin: <?php echo $medecin['medecinName']; ?></p>
             <p>Disponibilité: <?php echo $medecin['dispoinibilite']; ?></p>
             <p>Spécialité: <?php echo $medecin['specialite']; ?></p>
-    
+            <img src="<?php echo $room['imagePath'] . '?si=imanee&spr=https&sv=2022-11-02&sr=c&sig=zZGbqUZMIy3SuTjwwfVIkt996nMuPTppsZXGJp5VD0Q%3D'; ?>" alt="Room Image">
             <!-- Afficher l'image du médecin depuis Blob Storage -->
             <img src="<?php echo $medecin['imageDoc']; ?>" alt="Image du Médecin">
         </div>
