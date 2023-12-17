@@ -23,6 +23,12 @@ if ($medecin) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Détails du Médecin</title>
         <link rel="stylesheet" href="bodystyle.css">
+        <script>
+            function toggleReservation() {
+                var button = document.getElementById('reserveButton');
+                button.innerHTML = (button.innerHTML.trim() === 'Reserve') ? 'Reserved' : 'Reserve';
+            }
+        </script>
     </head>
     
     <body>
@@ -32,7 +38,9 @@ if ($medecin) {
             <p>Disponibilité: <?php echo $medecin['disponibilite']; ?></p>
             <p>Spécialité: <?php echo $medecin['specialite']; ?></p>
             <img src="<?php echo $medecin['imageDoc'] . '?sp=r&st=2023-12-17T15:31:27Z&se=2023-12-20T23:31:27Z&spr=https&sv=2022-11-02&sr=c&sig=4BgaWHaVQHOtKepm6k5dMu41VrtWxLnJaAIsg%2FiK%2Fhw%3D'; ?>" alt="Image du medecin">
-            <!-- Afficher l'image du médecin depuis Blob Storage -->
+            
+            <!-- Button to toggle reservation status -->
+            <button id="reserveButton" onclick="toggleReservation()">Reserve</button>
         </div>
     </body>
     
