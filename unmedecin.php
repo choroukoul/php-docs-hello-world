@@ -2,12 +2,12 @@
 include 'connexion.php'; // Include the database connection file
 
 // Récupérer le nom du médecin à partir des paramètres de requête
-$medecinName = $_GET['medecinName'];
+$medecinName = $_GET['idMedecin'];
 
 // Exécuter une requête pour obtenir les détails du médecin
-$sql = "SELECT medecinName, disponibilite, specialite, imageDoc FROM medecin WHERE medecinName = :medecinName";
+$sql = "SELECT idMedecin, disponibilite, specialite, imageDoc FROM medecin WHERE idMedecin = :medecinName";
 $stmt = $conn->prepare($sql);
-$stmt->bindParam(':medecinName', $medecinName);
+$stmt->bindParam(':idMedecin', $medecinName);
 $stmt->execute();
 $medecin = $stmt->fetch(PDO::FETCH_ASSOC);
 
